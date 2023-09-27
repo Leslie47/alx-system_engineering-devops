@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-0x00. Shell, basics
+Making a readme
