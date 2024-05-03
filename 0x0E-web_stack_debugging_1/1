@@ -1,0 +1,9 @@
+Vim: Warning: Output is not to a terminal
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;14r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[14;1H"./0-nginx_likes_port_80" 7L, 313C[1;1H[34m#!/usr/bin/env bash
+# Fixes the nginx listening port and reloads the nginx master process[m
+[33msed[m [35m-i[m [33m'[m[31ms/listen 8080/listen 80/g[m[33m'[m /etc/nginx/sites-enabled/default
+[33msed[m [35m-i[m [33m'[m[31ms/listen \[::\]:8080/listen \[::\]:80/g[m[33m'[m /etc/nginx/sites-enabled/default
+pgrep nginx [35m-o[m [33m>[m /run/nginx.pid
+nginx [35m-s[m [33mreload
+echo[m[31m [m[33m''[m[31m [m[33m>[m /run/nginx.pid
+[1m[34m~                                                                                              [9;1H~                                                                                              [10;1H~                                                                                              [11;1H~                                                                                              [12;1H~                                                                                              [13;1H~                                                                                              [m[14;78H7,24[10CAll[7;24H[?25h[?25l[14;68H<20>[7;24H[14;68H    [7;24H[?25h[?25l[14;68Hj[7;24H[14;68H [7;24H[?25h[?25l[14;68Hl[7;24H[14;68H [7;24H[?25h[?25l[14;68Hl[7;24H[14;68H [7;24H[?25h[?25l[14;68Hs[7;24H[14;68H [7;24H[14;68Hcl[7;24H[14;68H  [7;24H[14;1H[1m-- INSERT --[m[14;13H[K[14;78H7,24[10CAll[7;24H[K[7;24H[?25h
