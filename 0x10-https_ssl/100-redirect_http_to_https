@@ -33,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend leslie-frontend
+frontend opokuamaning-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend leslie-backend
+        default_backend opokuamaning-backend
 
-frontend leslie-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/leslie.tech.pem
+frontend opokuamaning-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/opokuamaning.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend leslie-backend
+        default_backend opokuamaning-backend
 
-backend leslie-tech-backend
+backend opokuamaning-tech-backend
     balance roundrobin
     server 530404-web-01 100.26.53.83:80 check
     server 530404-web-02 52.86.253.255:80 check
